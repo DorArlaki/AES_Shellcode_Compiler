@@ -1,0 +1,44 @@
+# AES Shellcode Compiler
+
+The AES Shellcode Compiler is a script that automates the process of encrypting shellcode using AES encryption and compiling it into a Windows DLL file. This can be useful for bypassing antivirus detection and executing custom shellcode payloads.
+
+## Prerequisites
+
+Before using the AES Shellcode Compiler, make sure you have the following prerequisites installed:
+
+- Python 3
+- `wget` command (for downloading files)
+- Metasploit Framework's `msfvenom` command
+- `x86_64-w64-mingw32-g++` compiler
+
+## Installation
+
+1. Clone the repository or download the script to your local machine.
+
+2. Install the required dependencies mentioned in the Prerequisites section.
+
+3. Ensure that the necessary commands (`wget`, `msfvenom`, and `x86_64-w64-mingw32-g++`) are properly installed and accessible in your system's PATH.
+
+## Usage
+
+1. Open a terminal or command prompt.
+
+2. Navigate to the directory where the script is located.
+
+3. Run the script using the following command:
+
+   ```shell
+   python3 AES_Shellcode_Compiler.py
+
+The script will perform the following steps:
+
+    - Download the AES encryption script (aes.py) from a specified GitHub repository.
+    - Modify the aes.py file to ensure compatibility with the C++ code template.
+    - Generate the beacon.bin payload using msfvenom.
+    - Execute the modified aes.py script to encrypt the beacon.bin payload.
+    - Extract the AES key and encrypted payload from the output file.
+    - Create a C++ code template with the extracted AES key and payload.
+    - Compile the C++ code into a Windows DLL file (helloworld.dll).
+
+After successful execution, helloworld.dll files will be generated in the same directory.
+
