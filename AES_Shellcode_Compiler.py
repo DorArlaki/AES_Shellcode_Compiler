@@ -151,5 +151,5 @@ subprocess.run(remove, shell=True, check=True)
 
 
 
-print("The helloworld.cpp file has been generated.")
+
 print("The helloworld.dll file has been generated.")
