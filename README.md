@@ -42,3 +42,13 @@ The script will perform the following steps:
 
 After successful execution, helloworld.dll files will be generated in the same directory.
 
+
+## Execution Instructions
+
+1. Transfer the `helloworld.dll` file to the target machine.
+2. Open a command prompt on the target machine.
+3. Navigate to the directory where the `helloworld.dll` file is located.
+4. Run the following command to execute the DLL:
+
+```shell
+rundll32.exe helloworld.dll, HelloWorld
