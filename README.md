@@ -52,23 +52,3 @@ After successful execution, helloworld.dll files will be generated in the same d
 
 ```shell
 rundll32.exe helloworld.dll, HelloWorld
-```
-
-## AES Script Modification Tool
-
-The AES Script Modification Tool is a Python script that helps modify an AES script to evade Windows Defender detection. It achieves this by changing the checksum of the script.
-
-## Features
-
-- Modifies an AES script to alter the checksum and avoid detection by Windows Defender.
-- Appends " Hello" to all `print` statements in the script to add a customizable string.
-
-## Usage
-
-1. Clone the repository or download the `modify_aes_script.py` script.
-2. Place the AES script you want to modify in the same directory as `modify_aes_script.py`. Ensure the AES script file is named `AES_Shellcode_Compiler.py`.
-3. Open a terminal or command prompt and navigate to the directory containing `modify_aes_script.py`.
-4. Run the following command:
-
-   ```shell
-   python3 modify_script.py
