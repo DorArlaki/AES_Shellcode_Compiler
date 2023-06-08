@@ -71,4 +71,4 @@ The AES Script Modification Tool is a Python script that helps modify an AES scr
 4. Run the following command:
 
    ```shell
-   python3 modify_script.py AES_Shellcode_Compiler.py
+   python3 modify_script.py
