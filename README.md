@@ -33,12 +33,16 @@ Before using the AES Shellcode Compiler, make sure you have the following prereq
 The script will perform the following steps:
 
     - Download the AES encryption script (aes.py) from a specified GitHub repository.
-    - Modify the aes.py file to ensure compatibility with the C++ code template.
+    - Generate an OpenSSL certificate by running the openssl command.
+    - Create an msfconfig.rc file with the necessary configuration for the Metasploit handler.
     - Generate the beacon.bin payload using msfvenom.
-    - Execute the modified aes.py script to encrypt the beacon.bin payload.
-    - Extract the AES key and encrypted payload from the output file.
-    - Create a C++ code template with the extracted AES key and payload.
-    - Compile the C++ code into a Windows DLL file (helloworld.dll).
+    - Execute aes.py with the beacon.bin payload to obtain the AES key and encrypted payload.
+    - Create a C++ code template for decrypting the shellcode using the AES key.
+    - Replace the placeholders in the C++ code template with the actual AES key and payload.
+    - Save the C++ code to a file (helloworld.cpp).
+    - Compile the C++ code using the x86_64-w64-mingw32-g++ compiler to generate the helloworld.dll file.
+    - Remove unnecessary files (aes.py, aes.txt, beacon.bin, helloworld.cpp).
+    - Execute msfconsole with the resource file (msfconfig.rc) to start the Metasploit handler.
 
 After successful execution, helloworld.dll files will be generated in the same directory.
 
